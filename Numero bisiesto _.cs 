@@ -1,0 +1,40 @@
+﻿// See https://aka.ms/new-console-template for more information
+using System;
+
+namespace NumeroBisiesto
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        
+
+        int numero = 0;
+        int dig_U = 0;
+        int dig_P = 0;
+        int dig_A = 0;
+
+       
+        Console.WriteLine("Introduzca el año al analizar: ");
+        numero = Convert.ToInt32(Console.ReadLine());
+
+        dig_A = (numero/100)%10;
+        dig_P = (numero /10) % 10;
+        dig_U = (numero % 10);
+
+
+        if ((dig_P % 2 == 0) & ((dig_U == 0) & (dig_A % 4 == 0)| (dig_U ==4)|(dig_U == 8)))
+        {
+            Console.WriteLine("El año que se ha colocado es un año bisiesto");
+        }
+
+        else  if  ((dig_P % 2 != 0) & (dig_U == 2) | (dig_U == 6))
+        {
+            Console.WriteLine("El año que se ha colocado es un año bisiesto");
+        }
+
+        else
+        {Console.WriteLine("El año que colocó no es un año bisiesto");}
+        }}}
+
+    
